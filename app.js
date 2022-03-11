@@ -7,6 +7,9 @@ const port = 3000
 app.set('view engine', 'ejs');
 app.use(expressLayouts);
 
+//Menggunakan middleware express.static
+app.use(express.static('public'))
+
 
 //Setting halaman root (home)
 app.get('/', (req, res) => {
@@ -58,10 +61,7 @@ app.get('/produk/:id/ctegory/:kategori', (req, res) => {
     res.send(`ID Produk : ${req.params.id} <br> Kategori Produk : ${req.params.kategori}`)
 })
 
-//Latihan menggunakan metode req.query. Penggunan metode ini akan menangkap request URL yang memiliki pola seperti ini: http://localhost:3000/produk/8?ctegory=rumah
-app.get('/produk/:id', (req, res) => {
-    res.send(`ID Produk : ${req.params.id} <br> Kategori Produk : ${req.query.ctegory}`)
-})
+
 
 //Metode use(), menangkap apupun yang direquest kemudian mengeksekusi function yang ada di dalamnya. Oleh karena itu jangan letakkan metode ini di paling atas agar requestnya tidak selalu ditangkap oleh metode use() ini. Pada umumnya metode ini nerfungsi untuk menghandle request halaman yang tidak ada.
 

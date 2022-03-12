@@ -29,3 +29,23 @@ MENGGANTI NAVBAR DARI TEMPLATE BOOTSRAP
 02. Cari navbar
 03. Copy templatenya ke file nav.ejs
 04. Ubah beberapa item sesuai dengan kebutuhan (seperti about, contact, home, dll)
+
+===========================================================================
+MENYUSUN TAMPILAN DAFTAR CONTACT di FILE contact.ejs
+
+01. Hapus isi file sebelumnya
+02. Buat element dasarnya (div dengan class .container>.row>.col-md-8)
+03. Buat tabel untuk menampilkan daftar contact dengan bootstrap
+04. Sesuaikan kolom dan nama kolomh
+05. Ambil icon yang disediakan oleh bootstrap dengan menghubungkannya secara online menggunakan CDN
+06. Gunakan icon yang desediakan oleh bootstrap untuk mempercantik tampilan. Silahkan cek disini untuk melihat dokumentasi icon bootstrap:
+https://icons.getbootstrap.com/
+
+==========================================================================
+MENGELOLA DATA CONTACT
+
+01. Membuat folder utils yang berisi file contacts.js, yang berfungsi untuk mengelola data contact
+02. Mengekspor fungsi loadContact() yang ada di file contacts.js
+03. mengimpornya kedalam file app.js
+04. Otomatis muncul folder data yang berisi file contacts.js, sebab dieksekusi (direfresh) oleh nodemon
+05. 

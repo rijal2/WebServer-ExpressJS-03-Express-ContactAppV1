@@ -52,4 +52,24 @@ BUAT FOLDER DAN FILE YANG BERISI FUNCTION PENGELOLAAN KONTAK
 
 CARA MENGGUNAKAN FOLDER UTILS DAN FILE contacts.js YANG BERADA DI DALAM NYA
 01. Sebagai awalan, isi file contacts.json dengan dua data. Setelah itu buat logika untuk menampilkan dua data tersebut ke layar halaman contact.
-02. 
+02. Gunakan function loadContact() yang sudah kita import, smpan kedalam sebuah variable contacts. Gunakan di dalam metode yang merespon halaman contact. Kemudian kirim variabel tersevut kedalam res.render()
+
+    app.get('/contact', (req, res) => {
+        // res.sendFile('./contact.html', {root: __dirname})
+        const contacts = loadContact()
+        console.log(contacts)
+        res.render('contact', {
+            title: "Halaman Contact",
+            layout: "layouts/main-layout",
+            contacts,
+        })
+    })
+
+03. Cetak data-data tersebut ke halaman contact. Caranya:
+    a. Masuk ke file contact.ejs
+    b. Elemen yang akan menampilkan data-data contact adalah elemen <tr>. Oleh karena itu elemen tersebut harus segera ditemukan kemudian di looping dengan forEach
+
+
+
+
+

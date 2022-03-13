@@ -56,7 +56,9 @@ app.get('/contact', (req, res) => {
     console.log(contacts)
     res.render('contact', {
         title: "Halaman Contact",
-        layout: "layouts/main-layout"})
+        layout: "layouts/main-layout",
+        contacts,
+    })
 })
 
 

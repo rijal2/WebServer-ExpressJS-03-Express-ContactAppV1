@@ -52,16 +52,12 @@ app.get('/about', (req, res) => {
 //Setting halaman Contact
 app.get('/contact', (req, res) => {
     // res.sendFile('./contact.html', {root: __dirname})
+    const contacts = loadContact()
+    console.log(contacts)
     res.render('contact', {
         title: "Halaman Contact",
         layout: "layouts/main-layout"})
 })
-
-//Latihan menggunakan metode rq.params. Penggunan metode ini akan menangkap request URL yang memiliki pola seperti ini: http://localhost:3000/produk/8/ctegory/rumah
-app.get('/produk/:id/ctegory/:kategori', (req, res) => {
-    res.send(`ID Produk : ${req.params.id} <br> Kategori Produk : ${req.params.kategori}`)
-})
-
 
 
 //Metode use(), menangkap apupun yang direquest kemudian mengeksekusi function yang ada di dalamnya. Oleh karena itu jangan letakkan metode ini di paling atas agar requestnya tidak selalu ditangkap oleh metode use() ini. Pada umumnya metode ini nerfungsi untuk menghandle request halaman yang tidak ada.
@@ -72,5 +68,5 @@ app.use('/', (req, res) => {
 })
 
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
+  console.log(`Example app listening on port http://localhost:${port}`)
 })

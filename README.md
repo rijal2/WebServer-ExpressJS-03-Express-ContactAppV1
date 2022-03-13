@@ -44,8 +44,12 @@ https://icons.getbootstrap.com/
 ==========================================================================
 MENGELOLA DATA CONTACT
 
+BUAT FOLDER DAN FILE YANG BERISI FUNCTION PENGELOLAAN KONTAK
 01. Membuat folder utils yang berisi file contacts.js, yang berfungsi untuk mengelola data contact
 02. Mengekspor fungsi loadContact() yang ada di file contacts.js
 03. mengimpornya kedalam file app.js
-04. Otomatis muncul folder data yang berisi file contacts.js, sebab dieksekusi (direfresh) oleh nodemon
-05. 
+04. Otomatis muncul folder data yang berisi file contacts.json, sebab dieksekusi (direfresh) oleh nodemon
+
+CARA MENGGUNAKAN FOLDER UTILS DAN FILE contacts.js YANG BERADA DI DALAM NYA
+01. Sebagai awalan, isi file contacts.json dengan dua data. Setelah itu buat logika untuk menampilkan dua data tersebut ke layar halaman contact.
+02. 

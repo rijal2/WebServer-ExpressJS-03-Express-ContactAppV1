@@ -1,1 +1,4 @@
-[]
+[
+    {"nama" : "Nama1", "No. HP" : "No. HP1", "email" : "email1@gmail.com"},
+    {"nama" : "Nama2", "No. HP" : "No. HP2", "email" : "email2@gmail.com"}
+]

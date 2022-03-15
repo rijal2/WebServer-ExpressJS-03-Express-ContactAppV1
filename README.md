@@ -70,6 +70,41 @@ CARA MENGGUNAKAN FOLDER UTILS DAN FILE contacts.js YANG BERADA DI DALAM NYA
     b. Elemen yang akan menampilkan data-data contact adalah elemen <tr>. Oleh karena itu elemen tersebut harus segera ditemukan kemudian di looping dengan forEach
 
 
+=================================================================
+RENCANA BERIKUTNYA ADALAH MENAMPILKAN HALAMAN DETAIL SETIAP KONTAK.
+Halaman ini bisa dibentuk dari pop up box yang bisa diambil dari Bootstrap.
+Di dalam halaman tersebut akan menampilkan beberapa informasi kontak dari setiap mahasiswa.
+Dan alamatnya disetting langsung mengarah berdasarkan nama mahasiswa.
+
+01. masukkan alamat halaman detail contact pada elemen <a href="">
+02. Karena alamatnya harus berdasarkan nama mahasiswa, maka alamat nya bisa disetting seperti ini: "/contact/param". Param yang dimaksud tersebut adalah nama mahasiswa.
+    <a href="/contact/<%= contact.nama  %> " class="btn btn-success badge rounded-pill"><i class="bi bi-info-circle"></i> detail</a>
+03. Untuk sementara tombo detail sudah mengarah ke alamat /contact/:nama
 
 
+MEMBUAT FUNGSI findContact() untuk mencari data kontak yang akan di tampilkan di halaman detail Contact.
+01. Buat dulu routing nya di app.js
+02. Tentukan nama params dibelakang /contact, dalam kasus ini nama params nya adalah "nama"
+03. Sebelum membuat fungsi fndContact() buat dulu halaman detail contactnya menggunakan bootsrap. Simpan dengan nama "detail.ejs"
+04. Arahkan responnya ke file detail.ejs
 
+    app.get('/contact/:nama', (req, res) => {
+        const contact = findContact(req.params.nama)
+
+        res.render('detail', {
+            title: "Halaman Detail Contact",
+            layout: "layouts/main-layout",
+            contacts,
+        })
+    })
+
+05. Buat function findContact() di contact.js,
+06. Didalam function tersebut uraikan urutan mulai dari pencarian contact hingga ditemukan kemudian dikirim.
+    Urutan:
+    a. Loading dulu semua data contact yang ada di contacts.json menggunakan fungsi loadContact() yang sudah pernah dibuat,
+        const contacts = loadContact();
+
+    b. Temukan kontak berdasarkan nama menggunakan metode find()
+    c. Eksport fungsi fincdContact()
+    d. Impor ke dalam file app.js
+    e. Jangan lupa atur isi elemen yang ada di file detail.ejs sesuai dengan data contact yang dikirim

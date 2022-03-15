@@ -115,3 +115,15 @@ JIKA DATA KONTAK YANG DICARI TIDAK ADA
 01. Buat pengkonsian if dihalaman detail.ejs, gunakan ejsif.
 02. Jika data kontak tidak ditemukan maka tampilkan alert (bisa ambil dari bootstrap)
 03. Jika ada maka tampilkan detail contact
+
+===============================================================================
+JIKA DATA CONTACT DI contact.json kosong
+
+01. Pengkondisiannya kali ini berada di halaman contact.ejs
+02. Buat pengkondisian menggunakan ejsif
+03. Ingat kali ini yang dicek adalah isi dari contacts.json, apakah ada atau tidak
+04. Jangan gunakan if(!contacts) karena sebenarnya di dalam contacts.json selalu ada array, entah array tersebut ada isinya atau tidak. Sehingga jika menggunakan pengkondisian tersebut kurang tepat.
+06. Solusinya gunakan pengecekan terhadap panjang(jumlah) isi yang ada di dalam array tersebut.
+07. Sehingga pengkondisiannya seperti ini => if(contacts.length === 0)
+08. Jika samadengan 0, maka tampilkan alert
+09. Jika ada isinya maka tampilkan daftar contact

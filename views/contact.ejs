@@ -12,6 +12,17 @@
                   </tr>
                 </thead>
                 <tbody>
+                  <% if (contacts.length === 0) { %>
+                   <tr>
+                     <td colspan="4">
+                      <div class="alert alert-danger" role="alert">
+                        Data contact masih Kosong.
+                      </div>
+                     </td>
+                   </tr>
+                    
+                  <% } %>
+
                   <% contacts.forEach((contact, n) => { %>
                     <tr>
                       <th scope="row"><%= n+1 %> </th>

@@ -108,3 +108,10 @@ MEMBUAT FUNGSI findContact() untuk mencari data kontak yang akan di tampilkan di
     c. Eksport fungsi fincdContact()
     d. Impor ke dalam file app.js
     e. Jangan lupa atur isi elemen yang ada di file detail.ejs sesuai dengan data contact yang dikirim
+
+===============================================================================
+JIKA DATA KONTAK YANG DICARI TIDAK ADA
+
+01. Buat pengkonsian if dihalaman detail.ejs, gunakan ejsif.
+02. Jika data kontak tidak ditemukan maka tampilkan alert (bisa ambil dari bootstrap)
+03. Jika ada maka tampilkan detail contact
